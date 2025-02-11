@@ -2,11 +2,12 @@ import './style.css'
 import { createApp } from 'vue';
 import App from './App.vue';
 import { createRouter, createWebHistory } from 'vue-router';
+import CoreMainLayout from './components/CoreMainLayout.vue'
 
 const routes = [
     {
       path: '/home',
-      component: () => import('./components/HelloWorld.vue'),
+      component: () => CoreMainLayout,
     },
   ];
   

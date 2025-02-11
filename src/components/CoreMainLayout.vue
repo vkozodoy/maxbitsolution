@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import CoreMainLayout from './components/CoreMainLayout.vue'
+import { ref } from 'vue'
+
+defineProps<{ msg: string }>()
+
 </script>
 
 <template>
-  <CoreMainLayout />
 </template>
 
 <style scoped>
