@@ -1,19 +1,11 @@
 import './style.css'
 import { createApp } from 'vue';
 import App from './App.vue';
-import { createRouter, createWebHistory } from 'vue-router';
-import CoreMainLayout from './components/CoreMainLayout.vue'
+import { createPinia } from 'pinia'
+import router from './router';
 
-const routes = [
-    {
-      path: '/home',
-      component: () => CoreMainLayout,
-    },
-  ];
-  
-  const router = createRouter({
-    history: createWebHistory(),
-    routes,
-  });
+const app = createApp(App);
 
-createApp(App).mount('#app')
+app.use(router);
+app.use(createPinia());
+app.mount('#app');

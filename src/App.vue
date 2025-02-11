@@ -1,10 +1,7 @@
 <script setup lang="ts">
-import CoreMainLayout from './components/CoreMainLayout.vue'
+  import Home from './pages/Home.vue'
 </script>
 
 <template>
-  <CoreMainLayout />
+  <Home />
 </template>
-
-<style scoped>
-</style>

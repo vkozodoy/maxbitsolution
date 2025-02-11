@@ -1,0 +1,1 @@
+export const cocktailList = ['margarita', 'mojito', 'a1', 'kir'];
