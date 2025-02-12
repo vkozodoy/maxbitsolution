@@ -1,14 +1,13 @@
 <script setup lang="ts">
-    import { ref } from 'vue'
-    import CocktailImage from '../cocktails/CocktailImage.vue'
-    import Cocktailingredients from '../cocktails/Cocktailingredients.vue'
-    import { Cocktail } from '../interfaces/index';
+    import CocktailImage from './CocktailImage.vue'
+    import CocktailIngredients from './CocktailIngredients.vue';
+    import { Cocktail } from '@/interfaces/index';
 
     defineProps<{ cocktails: Cocktail[] }>()
 </script>
 
 <template>
-    <div v-if="cocktails.length > 0" class="cocktail-details" v-for="cocktail in cocktails" :key="cocktail">
+    <div class="cocktail-details" v-for="cocktail in cocktails" :key="cocktail.idDrink">
         <div class="cocktail-info-box">
             <div class="cocktail-info">
                 <h1>{{ cocktail.strDrink }}</h1>
@@ -19,7 +18,7 @@
             </div>
             <CocktailImage :src="cocktail.strDrinkThumb"></CocktailImage>
         </div>
-        <Cocktailingredients></Cocktailingredients>
+        <CocktailIngredients :cocktail="cocktail"></CocktailIngredients>
     </div>
 </template>
 
@@ -27,7 +26,7 @@
     .cocktail-details {
         padding: 20px;
         background-color: white;
-        border-radius: 5px;
+        border-radius: 12px;
         color: black;
         
         h1, p {

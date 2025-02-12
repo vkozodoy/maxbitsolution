@@ -1,13 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-
-defineProps<{ src: string }>()
-
+    defineProps<{ src: string }>();
 </script>
 
 <template>
     <div class="cocktail-image">
-        <img :src="src" loading="lazy"/>
+        <img :src="src" loading="lazy" />
     </div>
 </template>
 
@@ -19,7 +16,7 @@ defineProps<{ src: string }>()
         display: flex;
         justify-content: center;
         align-items: center;
-        border-radius: 5px;
+        border-radius: 12px;
         margin-top: 20px;
         justify-content: right;
 
@@ -27,7 +24,7 @@ defineProps<{ src: string }>()
             max-width: 100%;
             max-height: 100%;
             object-fit: contain;
-            border-radius: 5px;
+            border-radius: 12px;
         }
     }
 

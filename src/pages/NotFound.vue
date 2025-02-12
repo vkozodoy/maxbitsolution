@@ -9,7 +9,7 @@
 </script>
 
 <style scoped>
-    .not-found {
-        text-align: center;
-    }
+  .not-found {
+    text-align: center;
+  }
 </style>

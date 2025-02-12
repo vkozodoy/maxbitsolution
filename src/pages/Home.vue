@@ -1,5 +1,4 @@
 <script setup lang="ts">
-    import { ref } from 'vue'
     import Menu from '../components/menu/Menu.vue'
     import CocktailContainer from '../components/cocktails/CocktailContainer.vue';
 </script>

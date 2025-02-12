@@ -1,14 +1,15 @@
 export interface Cocktail {
+    idDrink: string;
     strDrink: string;
-    strDrinkThumb: string;
-    strAlcoholic: string;
     strCategory: string;
+    strAlcoholic: string;
     strGlass: string;
-    ingredientsList: string[];
-    measuresList: string[];
-    instructionsList: string[]; 
-}
+    strInstructions: string;
+    strDrinkThumb: string;
+    [key: `strIngredient${number}`]: string | null;
+    [key: `strMeasure${number}`]: string | null;
+}  
 
 export interface CocktailResponse {
     drinks: Cocktail[];
-  }
+}
