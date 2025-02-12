@@ -17,7 +17,6 @@ export const useCocktailStore = defineStore('cocktailStore', {
             try {
                 const response = await getCocktails(cocktail);
                 if (response?.drinks.length) {
-                    console.log(response.drinks);
                     this.cocktails = response.drinks;
                 } else {
                     throw new Error('No cocktails found');
@@ -44,12 +43,12 @@ export const useCocktailStore = defineStore('cocktailStore', {
 
             for (let i = 1; i <= 15; i++) {
                 const ingredient = cocktail[`strIngredient${i}` as keyof Cocktail];
-                const measure = cocktail[`strMeasure${i}` as keyof Cocktail] || ""; // Если `null`, ставим пустую строку
+                const measure = cocktail[`strMeasure${i}` as keyof Cocktail] || "";
 
                 if (ingredient) {
                     ingredients.push({
                         ingredient,
-                        measure, // Теперь `measure` всегда строка
+                        measure,
                     });
                 }
             }
