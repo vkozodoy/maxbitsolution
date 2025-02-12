@@ -9,9 +9,6 @@ const store = useCocktailStore();
   <div v-if="store.cocktails.length" class="cocktail-container">
     <CocktailDetails :cocktails="store.cocktails"></CocktailDetails>
   </div>
-  <div v-else class="cocktail-container empty">
-    Oooooooops, cocktail list is empty
-  </div>
 </template>
 
 <style scoped>
@@ -22,15 +19,5 @@ const store = useCocktailStore();
   flex-direction: column;
   gap: 20px;
   background: #f9f9f9;
-
-  &.empty {
-    color: black;
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    font-size: 32px;
-    height: 200px;
-  }
 }
 </style>
