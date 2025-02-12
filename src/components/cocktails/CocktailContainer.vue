@@ -1,13 +1,12 @@
 <script setup lang="ts">
+import { Cocktail } from '@/interfaces';
 import CocktailDetails from '../cocktails/CocktailDetails.vue';
-import useCocktailStore from '../../store/index';
-
-const store = useCocktailStore();
+defineProps<{ cocktails: Cocktail[] }>();
 </script>
 
 <template>
-  <div v-if="store.cocktails.length" class="cocktail-container">
-    <CocktailDetails :cocktails="store.cocktails"></CocktailDetails>
+  <div v-if="cocktails.length" class="cocktail-container">
+    <CocktailDetails :cocktails="cocktails"></CocktailDetails>
   </div>
 </template>
 

@@ -18,6 +18,7 @@ li {
   border-radius: 12px;
   margin-left: 10px;
   margin-right: 10px;
+  text-align: center;
 
   &.active,
   &:hover {
