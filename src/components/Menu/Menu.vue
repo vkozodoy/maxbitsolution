@@ -4,17 +4,17 @@ import MenuList from '../menu/MenuList.vue';
 import { cocktailList } from '../../constants/index';
 
 const emit = defineEmits<{
-  (event: "click", value: string): void;
+  (event: 'click', value: string): void;
 }>();
 
 const handleClick = async (cocktail: string) => {
-  emit("click", cocktail);
+  emit('click', cocktail);
 };
 </script>
 
 <template>
   <div class="menu">
-    <MenuList :cocktailList="cocktailList" @click="handleClick"/>
+    <MenuList :cocktailList="cocktailList" @click="handleClick" />
   </div>
 </template>
 

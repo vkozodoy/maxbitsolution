@@ -5,13 +5,13 @@ import useCocktailStore from '../../store/index';
 
 defineProps<{ cocktailList: string[] }>();
 const emit = defineEmits<{
-  (event: "click", value: string): void;
+  (event: 'click', value: string): void;
 }>();
 const store = useCocktailStore();
 
 const handleClick = async (cocktail: string) => {
   store.setActiveCocktail(cocktail);
-  emit("click", cocktail);
+  emit('click', cocktail);
 };
 </script>
 
